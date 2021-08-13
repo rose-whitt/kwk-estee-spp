@@ -1,0 +1,32 @@
+@import '_mixins.scss';
+.elc-breadcrumbs {
+    // background-color: rgb(198, 230, 176);
+    // position: absolute;
+    left: 0;
+    display: inline-block;
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .breadcrumb-home {
+        // background-color: red;
+        display: inline-block;
+        @include responsive(phone) {
+            display: none;
+        }
+    }
+    .breadcrumb-slash {
+        display: inline-block;
+        // background-color: salmon;
+        margin: 0 5px;
+        @include responsive(phone) {
+            display: none;
+        }
+    }
+    .breadcrumb-current {
+        display: inline-block;
+        cursor: pointer;
+        // background-color: purple;
+    }
+}

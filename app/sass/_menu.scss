@@ -1,0 +1,662 @@
+/**
+ * The menu is technically the header of the site, it contains the styles for the drop down of the Search Bar.
+ *
+ */
+ @import '_mixins.scss';
+
+ $lineHeightForNav: 20px;
+ $lineHeightForSearch: 50px;
+ 
+ 
+ header.menu {
+ 
+     // ...
+     width: 100%;
+     position: relative;
+     z-index: 10;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+    //  border: 1px solid #1b0fc0;
+     @include responsive(phone) {
+         width: 100%;
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+     }
+     
+ 
+     .top-ad {
+         display: inline-block;
+         width: 100%;
+         // height: 24px;
+         background-color: #040a2b;
+         padding: 5px 0;
+         // text-align: center;
+         @include responsive(phone) {
+             width: 100%;
+             padding: 0;
+             margin: 0;
+         }
+         
+     }
+ 
+     .top-ad-container {
+         display: inline-block;
+         width: 98.5%;
+         // padding: 0 50px;
+         // border: 1px solid pink;
+         text-align: center;
+         // padding-left: 100px;
+         background-color: transparent;
+         // background-color: rgb(140, 0, 255);
+     }
+     .top-ad-text {
+         display: inline-block;
+         font-size: 15px;
+         color: white;
+         padding-left: 25px;
+         padding-right: 5px;
+         line-height: 24px;
+         text-align: center;
+         letter-spacing: 0.05em;
+         // font-weight: 600;
+         // background-color: pink;
+     }
+     
+     .details {
+         display: inline-block;
+         font-size: 15px;
+         color: #9eafff;
+         cursor: pointer;
+     }
+     
+     .exit {
+         font-family: Optima;
+         display: inline-block;
+         font-size: 30px;
+         font-weight: lighter;
+         color: white;
+         cursor: pointer;
+         line-height: 24px;
+         // background-color: rgb(170, 17, 43);
+         // -left: 50%;
+        @include responsive(phone) {
+            position: absolute;
+            top: 5px;
+            right: 2%;
+        }
+     }
+ 
+     div.menu-container {
+         width: 100%;
+         background-color: rgb(255, 255, 255);
+         padding-left: 20px;
+         text-align: left;
+         @include responsive(phone) {
+             width: 100%;
+             background-color: rgb(255, 255, 255);
+             padding: 0;
+             margin: 0;
+             border-bottom: 1px solid grey;
+             height: 52px;
+             box-sizing: border-box;
+             // display: none;
+         }
+         
+         div.menu-holder {
+             position: relative;
+             width: 100%;
+             // max-width: $siteWidth;
+             box-sizing: border-box;
+             // changing margin from 0 shifted it to farest left
+             padding-top: 9px;
+             @include responsive(phone) {
+                 width: 100%;
+                 background-color: rgb(255, 255, 255);
+                 padding: 0;
+                 margin: 0;
+                 display: flex;
+                justify-content: space-between;
+                padding: 0 15px;
+                 // display: none;
+             }
+             // padding-left: 20px;
+             
+         }
+ 
+         a.site-logo {
+             background-image: url('/img/elc-logo-large.webp');
+             background-size: 236px 31px;
+             width: 236px;
+             height: 31px;
+             display: block;
+             margin-top: 15px;
+             margin-bottom: 5px;
+             @include responsive(phone) {
+                position: relative;
+             //    left: 50%;
+                background-size: 166px 23px;
+                width: 166px;
+                height: 23px;
+                padding: 0;
+                margin: 0;
+                margin-top: 12px;
+             //    background-color: brown;
+             }
+         }
+ 
+         h1 {
+             font-family: Arial, Helvetica, sans-serif;
+             // font-size: 24px;
+             line-height: $lineHeightForNav;
+             color: white;
+             text-align: left;
+             display: inline-block;
+             @include responsive(phone) {
+                 text-align: center;
+                 padding: 0;
+                 margin: 0;
+                 // position: relative;
+                 // left: 50%;
+                 margin-left: 30%;
+                 // background-color: rgb(255, 230, 0);
+                 // display: inline;
+             }
+             
+         }
+         nav {
+             display: block;
+             
+             
+             // margin-top: -20px;
+             // margin-left: 20px;
+             @include responsive(phone) {
+                //  display: inline-block;
+                //  background-color: transparent;
+                //  width: 100%;
+                //  top: 0;
+                //  left: 0;
+                //  position: absolute;
+                //  height: 100%;
+                position: absolute;
+                
+                // background-color: #3D4852;
+                // top:70px;
+                left:0;
+                width: 100%;
+                //  background-color: blue;
+                 // border-bottom: 1px solid grey;
+             }
+ 
+             i { 
+                 color: black;
+                 // font-size: 30px;
+                 line-height: $lineHeightForNav;
+                 
+             }
+             i.search {
+                 position: absolute;
+                 right: 10px;
+                 top: 0;
+                 // @include responsive(phone) {
+                 //     margin: 0;
+                 // }
+             }
+
+             i.arrow_forward_ios {
+                display: none;
+                @include responsive(phone) {
+                    font-weight: lighter;
+                    color: lightgrey;
+                    display: inline-block;
+                    // background-color: pink;
+                    // position: absolute;
+                    // left: 75%;
+                    
+                    vertical-align: middle;
+                    // padding-left: 70%;
+                    font-size: 30px;
+                }
+             }
+             
+            //  i.menu {
+            //     //  position: absolute;
+                
+            //     //  top: 30%;
+            //     //  background-color: blue;
+            //  }
+ 
+             a.nav-item {
+                 font-family: "Akziden";
+                 font-size: 12px;
+                 font-weight: bold;
+                 letter-spacing: .15em;
+                 line-height: $lineHeightForNav;
+                 text-transform: uppercase;
+                 text-decoration: none;
+                 white-space: nowrap;
+                 border-bottom: 1px solid transparent;
+                 color: #000;
+                 margin-right: 21px;
+                 @include responsive(phone) {
+                    //  display: none;
+                    font-size: 15px;
+                    padding: 10px 0 10px 18px;
+                     margin: 0;
+                    //  margin-right: 30%;
+                     width: 90%;
+                    //  display: inline-block;
+                    //  width: 30%;
+                    //  background-color: green;
+                 }
+             }
+
+             #nav-item-mobile {
+                display:  none;
+                // background-color: pink;
+                @include responsive(phone) {
+                    display: inline-block;
+                    //  display: none;
+                    font-size: 15px;
+                    padding: 10px 0 10px 18px;
+                     margin: 0;
+                     width: 100%;
+                    //  background-color: pink;
+                 }
+             }
+
+            //  #ARROW-ICON {
+            //     display: none;
+            //     @include responsive(phone) {
+            //         font-weight: lighter;
+            //         color: lightgrey;
+            //         display: inline-block;
+            //         // background-color: pink;
+            //         position: absolute;
+            //         left: 75%;
+            //         vertical-align: middle;
+            //         // padding-left: 70%;
+            //         font-size: 30px;
+            //     }
+            // }
+ 
+             
+         }
+
+         nav ul {
+            list-style-type: none;
+            @include responsive(phone) {
+                list-style-type: none;
+                width: 83%;
+                // margin-top: 52px;
+                // border: 1px solid blue;
+                
+                height: 100%;
+                box-sizing: content-box;
+                max-height: 0;
+                overflow: hidden;
+                z-index: 2;
+                // transition:
+                
+                // background-color: pink;
+            }
+        }
+
+         nav ul li {
+             display: inline-block;
+            @include responsive(phone) {
+                background-color: white;
+                display: block;
+                border-bottom: #f2f2f2 1px solid;
+                // padding: 0 15px;
+            }
+         }
+
+         nav ul li a {
+            @include responsive(phone) {
+                display: inline-block;
+                padding: 12px;
+                //  letter-spacing: 0.05em;
+                //  background-color: pink;
+            }
+         }
+         
+         nav ul li a:hover, nav ul li a:focus {
+            // color: #eb6f4a;
+         }
+
+         #SEARCH {
+             // width: 62px;
+             height: 52px;
+             display: inline-block;
+             font-size: 35px;
+             // background-color: pink;
+             margin-top: 20px;
+             padding-top: 20px;
+             padding-left: 10px;
+             // padding-right: 10px;
+             border-left: 1px solid grey;
+             align-items: center;
+             @include responsive(phone) {
+                 width: 21px;
+                 height: 22px;
+                 font-size: 28px;
+                 // display: block;
+                 // border: 1px solid rgb(85, 20, 190);
+                 padding: 0;
+                 // margin: 0;
+                 position: absolute;
+                 // background-color: rgb(255, 192, 247);
+                 // vertical-align: top;
+                 margin-left: 50px;
+                 margin-top: 15px;
+                 left: 0;
+                 border: none;
+                 
+                 // margin-left: 20px;
+                 // margin-bottom: 30px;
+             }
+             
+         }
+
+         #MENU-ICON {
+            display: none;
+            @include responsive(phone) {
+            //    vertical-align: middle;
+               // border: 1px solid black;
+               //  background-size: 18px 14px;
+               //  width: 18px;
+               //  height: 14px;
+                display: inline-block;
+                // padding-top: 10px;
+                padding-left: 5px;
+                // background-color: chartreuse;
+                // top: 10%;
+                // margin-top: 10px;
+                // margin-left: 5px;
+                box-sizing: border-box;
+               //  background-image: url("https://www.esteelauder.com/media/images/background-images/background-image10.png");
+                cursor: pointer;
+                align-items: center;
+                font-size: 28px;
+                position: absolute;
+                left: 0;
+                line-height: 50px;
+            }
+        }
+
+        i.close {
+            @include responsive(phone) {
+                display: none;
+                // display: inline-block;
+                padding-left: 5px;
+                box-sizing: border-box;
+                cursor: pointer;
+                align-items: center;
+                font-size: 28px;
+                position: absolute;
+                left: 0;
+                line-height: 50px;
+            }
+        }
+
+        #checkbox {
+            display: none;
+        }
+
+        #checkbox:checked ~ nav ul {
+            max-height: 100%;
+            padding: 52px 0;
+            transition: all 1.0s;
+        }
+
+        
+        
+        .menu-signin-shop {
+            // border: 1px solid red;
+            display: inline-block;
+            position: absolute;
+            right: 3.6%;
+            top:22%;
+            // background-color: pink;
+
+            @include responsive(phone) {
+                top: 35%;
+                right: 3%;
+                height: 100%;
+                // background-color: pink;
+                
+                // display: inline-block;
+
+            }
+
+            .shop-cart {
+                background-position: 0 0;
+                background-size: 21px 22px;
+                width: 21px;
+                height: 22px;
+                margin: 0 20px;
+                
+                // height: 100%;
+                // display: block;
+                display: inline-block;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url("https://www.esteelauder.com/sites/esteelauder/themes/estee_base/img/inline/mob_gnav_bag_navy.png");
+                @include responsive(phone) {
+                    width: 21px;
+                    height: 22px;
+                    margin: 0;
+                    vertical-align: middle;
+                }
+            }
+
+            .user-stuff {
+                display: inline-block;
+                padding-top: 5%;
+                text-align: right;
+                cursor: pointer;
+                // line-height: 52px;
+                height: 52px;
+                border-right: 1px solid grey;
+                
+                padding-right: 20px;
+                // background-color: pink;
+                
+                //  margin-left: 710px;
+                // margin-left: 66.5%;
+                // background-color: lightblue;
+                 @include responsive(phone) {
+                     display: inline-block;
+                     margin-left: 0;
+                     top: 0;
+                     margin-bottom: 10px;
+                     border: none;
+                 }
+    
+                 .sign-in {
+                    display: inline-block;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    letter-spacing: .15em;
+                    font-weight: 400;
+                    
+                    @include responsive(phone) {
+                        display: inline-block;
+                        // font-family: AkzidenzGrotesk;
+                        text-transform: uppercase;
+                        letter-spacing: 0;
+                        font-size: 11px;
+                        color: #0e122a;
+                        display: block;
+                        // top: 0;
+                        // margin-left: 45px;
+                        // margin-bottom: 30px;
+                        // background-color: pink;
+                        cursor: pointer;
+                        vertical-align: middle;
+                    }
+                }
+    
+                .join {
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    font-size: 12px;
+                    @include responsive(phone) {
+                        display: none;
+                    }
+                }
+             }
+        }
+        //  .shop-cart-button {
+        //      vertical-align: middle;
+        //      height: 52px;
+        //      line-height: 52px;
+        //      padding: 0 8px;
+        //      cursor: pointer;
+        //      position: absolute;
+        //      top: 0;
+        //      left: 92.8%;
+        //      z-index: 10;
+        //      border-left: 1px solid #cccccc;
+        //      cursor: pointer;
+        //      margin-top: 20px;
+        //      // padding-top: 20px;
+        //      padding-left: 15px;
+        //      // padding-right: 10px;
+        //      border-left: 1px solid grey;
+        //     //  background-color: blue;
+        //      align-items: center;
+        //      @include responsive(phone) {
+        //          padding: 0;
+        //          margin: 0;
+        //          border: none;
+        //          line-height: inherit;
+        //          left: 93%;
+        //      }
+        //  }
+        //  .shop-cart {
+        //      background-position: 0 0;
+        //      background-size: 21px 22px;
+        //      width: 21px;
+        //      height: 22px;
+        //      display: block;
+        //      background-image: url("https://www.esteelauder.com/sites/esteelauder/themes/estee_base/img/inline/mob_gnav_bag_navy.png");
+        //      @include responsive(phone) {
+        //          width: 21px;
+        //          height: 22px;
+        //      }
+        //  }
+ 
+        //  .user-stuff {
+        //     display: inline-block;
+        //     top: 0;
+        //     text-align: right;
+        //     cursor: pointer;
+        //     //  margin-left: 710px;
+        //     margin-left: 66.5%;
+        //     // background-color: lightblue;
+        //      @include responsive(phone) {
+        //          display: inline-block;
+        //          margin-left: 0;
+        //          top: 0;
+        //          margin-bottom: 10px;
+        //      }
+
+        //      .sign-in {
+        //         display: inline-block;
+        //         text-transform: uppercase;
+        //         font-size: 12px;
+        //         letter-spacing: .15em;
+        //         font-weight: 400;
+        //         @include responsive(phone) {
+        //             display: inline-block;
+        //             // font-family: AkzidenzGrotesk;
+        //             text-transform: uppercase;
+        //             letter-spacing: 0;
+        //             font-size: 11px;
+        //             color: #0e122a;
+        //             display: block;
+        //             // top: 0;
+        //             margin-left: 45px;
+        //             // margin-bottom: 30px;
+        //             // background-color: pink;
+        //             cursor: pointer;
+        //             vertical-align: top;
+        //         }
+        //     }
+
+        //     .join {
+        //         text-transform: capitalize;
+        //         letter-spacing: 1px;
+        //         font-size: 12px;
+        //         @include responsive(phone) {
+        //             display: none;
+        //         }
+        //     }
+        //  }
+ 
+         
+ 
+         
+ 
+         
+        //  .nav-button {
+        //      display: none;
+        //      @include responsive(phone) {
+        //          display: inline-block;
+        //          text-align: center;
+        //          width: 38px;
+        //          height: 52px;
+        //          position: absolute;
+        //          left: 0;
+        //          top: 0;
+        //          z-index: 30;
+        //          // border: 1px solid black;
+        //      }
+             
+        //  }
+ 
+         
+ 
+         
+         // .material-icons.search {
+         //     border: 1px solid black;
+         //     background-color: blue;
+         //     width: 62px;
+         //     height: 52px;
+         // }
+     }
+ 
+     div.search-container {
+         position: absolute;
+         background-color: white;
+         z-index: 20;
+         box-shadow: 0 0 10px rgba(0,0,0,0.1);
+         width: 100%;
+         padding: 5px;
+         background-color: white;
+         border-bottom: 1px solid #CCC;
+         display: none;
+         &.showing { display: block; }
+         
+         
+         input[type='text'] {
+             min-width: 100%;
+             font-size: 36px;
+             line-height: $lineHeightForSearch;
+             border: 1px solid #CCC;
+             padding: 0 10px;
+         }
+ 
+         i.close {
+             position: absolute;
+             right: 10px;
+             top: 5px;
+             font-size: 36px;
+             line-height: $lineHeightForSearch;
+         }
+     }
+ 
+ }
