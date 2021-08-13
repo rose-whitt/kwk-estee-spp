@@ -1,3 +1,10 @@
+# Link to My Deck
+https://docs.google.com/presentation/d/1vo-3ZGuREGugDx_nyBqSHFz1R9CQxi8F2q4bInZM5KI/edit?usp=sharing
+
+# Link to My Presentation (Zoom Recording)
+https://elcompanies.zoom.us/rec/play/Z5HlzghVZ9Dev0PFIEKYLdj640CCuQBvfgH6pr5qB4NcsuyNKkeyRz8q9Z3tcMicZlP1v1tZU9q6Lm6e.JBL6fyx3aAPFXRsB?startTime=1628788827000&_x_zm_rtaid=-tLoqPByQ9GiEeUz0XWKpA.1628885448883.d5b693413dfef6ea95277c3f8e283a69&_x_zm_rhtaid=396
+
+
 # ELC JavaScript Intern Project
 
 Welcome to ELC Online!
